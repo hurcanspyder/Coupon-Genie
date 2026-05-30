@@ -13,12 +13,15 @@ export const metadata: Metadata = {
   description: 'Instantly search, discover, and copy discount coupons for Amazon, Flipkart, Myntra, Swiggy, and Zomato. Reveal secret coupon offers with one click!',
   keywords: ['coupons', 'discount codes', 'promo codes', 'shopping deals', 'cashback offers', 'Coupon Genie'],
   authors: [{ name: 'Coupon Genie Team' }],
+  verification: {
+    google: 'ASBEUBTqF-683pbOAbO0_WI1EdavrWvP__Feeb8ZgjQ',
+  },
   openGraph: {
     title: 'Coupon Genie - Unlock Ultimate Discount Savings',
     description: 'Find verified discount codes for top stores instantly. Try our magic random coupon reveal system for maximum savings.',
     type: 'website',
     locale: 'en_US',
-    url: 'https://coupongenie.dev',
+    url: 'https://coupon-genie-bice.vercel.app',
     siteName: 'Coupon Genie',
   },
   twitter: {

@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin
 Disallow: /dashboard
 
-Sitemap: https://coupongenie.dev/sitemap.xml
+Sitemap: https://coupon-genie-bice.vercel.app/sitemap.xml
