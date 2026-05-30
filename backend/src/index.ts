@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 5000;
 
 // Enable CORS with support for frontend
 app.use(cors({
-  origin: 'https://coupon-genie-bice.vercel.app/', // For development flexibility
+  origin: 'https://coupon-genie-bice.vercel.app', // Remove trailing slash for proper CORS matching
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
