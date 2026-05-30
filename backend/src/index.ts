@@ -14,10 +14,23 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Enable CORS with support for frontend
+const allowedOrigins = [
+  'https://www.coupongenie.online',
+  'https://coupon-genie-bice.vercel.app',
+  'http://localhost:3000', // Local development
+];
+
 app.use(cors({
-  origin: 'https://coupon-genie-bice.vercel.app', // Remove trailing slash for proper CORS matching
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true,
 }));
 
 app.use(express.json());
