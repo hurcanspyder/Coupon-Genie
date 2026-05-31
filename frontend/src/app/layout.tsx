@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
+import Script from 'next/script';
 import { AuthProvider } from '../context/AuthContext';
 import { ToastProvider } from '../context/ToastContext';
 import './globals.css';
@@ -47,6 +48,9 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+        {/* Google tag (gtag.js) - Global site tag */}
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-1FN83365SV" strategy="afterInteractive" />
+        <Script id="gtag-init" strategy="afterInteractive" dangerouslySetInnerHTML={{ __html: "window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-1FN83365SV');" }} />
       </head>
       <body className="flex flex-col min-h-screen select-none antialiased">
         <AuthProvider>
